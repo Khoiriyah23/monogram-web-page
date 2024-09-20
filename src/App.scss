@@ -172,74 +172,6 @@
   margin-top: 20px;
   font-size: 1.4rem;
 }
-/* Responsive styles */
-@media (max-width: 768px) {
-  .header{
-    position: relative;
-  }
-  .nav-toggle {
-    display: block;
-    position: absolute; /* Position it absolutely */
-    top: 1rem; /* Adjust as needed */
-    right: 1rem; /* Align to the right */
-    z-index: 15; /* Ensure it appears above other elements */
-
-  }
-
-  .nav {
-    display: none; /* Hide nav by default on mobile */
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Full width */
-    background-color: white; /* Optional: set a background color */
-    position: absolute; /* Position absolutely */
-    top: 100%; /* Place below the header */
-    left: 0; /* Align to the left */
-    z-index: 10; /* Ensure it appears above other elements */
-  }
-
-  .nav.show {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-}
-@media (max-width: 1200px) {
-  .bgShop h1 {
-    font-size: 2rem;
-  }
-  
-  .bgShop p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 830px) {
-  .bgShop h1 {
-    font-size: 1.5rem;
-  }
-  
-  .bgShop p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .bgShop h1 {
-    font-size: 1.2rem;
-  }
-  
-  .bgShop p {
-    font-size: 0.9rem;
-  }
-}
-
 
 main{
   width: 100%;
@@ -282,9 +214,6 @@ main{
   margin-top: 0;
 }
 
-
-
-
 .ownConsole {
   background-image: url("./assets/images/shop-banner.jpg");
   background-repeat: no-repeat;
@@ -323,7 +252,7 @@ main{
   gap: 20px;
   width: 75%;
   color: #063874ad;
-  margin: auto;
+  margin:0 auto;
   margin-bottom: 50px;
 }
 .monogramCases article{
@@ -334,14 +263,6 @@ main{
   }
   span{
     color: #063874ad;
-  }
-}
-
-@media (max-width: 1200px) {
-  .monogramCases {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
-    width: 90%;
   }
 }
 
@@ -472,7 +393,59 @@ footer a:hover {
   transform: scale(1.1);
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header{
+    position: relative;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute; /* Position it absolutely */
+    top: 1rem; /* Adjust as needed */
+    right: 1rem; /* Align to the right */
+    z-index: 15; /* Ensure it appears above other elements */
+    max-width: 100%;
+  }
+
+  .nav {
+    display: none; /* Hide nav by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    background-color: white; /* Optional: set a background color */
+    position: absolute; /* Position absolutely */
+    top: 100%; /* Place below the header */
+    left: 0; /* Align to the left */
+    z-index: 10; /* Ensure it appears above other elements */
+    max-width: 100%;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 1200px) {
+  .bgShop h1 {
+    font-size: 2rem;
+  }
+  
+  .bgShop p {
+    font-size: 1.2rem;
+  }
+  .monogramCases {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    margin: 0 auto;
+    width: 90%;
+  }
   footer section {
     flex-wrap: wrap;
   }
@@ -480,6 +453,28 @@ footer a:hover {
     flex: 1 1 calc(45% - 20px); 
   }
 }
+
+@media (max-width: 830px) {
+  .bgShop h1 {
+    font-size: 1.5rem;
+  }
+  
+  .bgShop p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgShop h1 {
+    font-size: 1.2rem;
+  }
+  
+  .bgShop p {
+    font-size: 0.9rem;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   footer section {

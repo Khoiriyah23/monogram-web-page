@@ -55,10 +55,18 @@ const Header = () => {
                  172,47.266,399.817,48.633,399.818,51.6Z"></path></svg>
         </a>
         <button className="nav-toggle" aria-label="Toggle navigation" onClick={toggleNav}>
-          <span className={`hamburger ${navOpen ? 'active' : ''}`}>
-            <img src={hambug} alt="Menu" />
-          </span>
-        </button>
+  <span className={`hamburger ${navOpen ? 'active' : ''}`}>
+  {navOpen ? (
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+) : (
+  <img src={hambug} alt="Menu" />
+)}
+
+  </span>
+</button>
+
       </div>
 
       <nav className={`nav ${navOpen ? 'show' : ''}`}>
