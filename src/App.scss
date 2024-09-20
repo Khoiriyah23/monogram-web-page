@@ -137,32 +137,6 @@
 
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav.show {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-}
-
 .bgShop {
   background-image: url("./assets/images/bg-shop.jpg");
   background-repeat: no-repeat;
@@ -198,7 +172,44 @@
   margin-top: 20px;
   font-size: 1.4rem;
 }
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header{
+    position: relative;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute; /* Position it absolutely */
+    top: 1rem; /* Adjust as needed */
+    right: 1rem; /* Align to the right */
+    z-index: 15; /* Ensure it appears above other elements */
 
+  }
+
+  .nav {
+    display: none; /* Hide nav by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    background-color: white; /* Optional: set a background color */
+    position: absolute; /* Position absolutely */
+    top: 100%; /* Place below the header */
+    left: 0; /* Align to the left */
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 1200px) {
   .bgShop h1 {
     font-size: 2rem;

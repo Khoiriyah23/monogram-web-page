@@ -56,7 +56,7 @@ const Header = () => {
         </a>
         <button className="nav-toggle" aria-label="Toggle navigation" onClick={toggleNav}>
           <span className={`hamburger ${navOpen ? 'active' : ''}`}>
-            <img src={hambug} />
+            <img src={hambug} alt="Menu" />
           </span>
         </button>
       </div>
