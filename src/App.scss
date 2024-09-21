@@ -61,7 +61,7 @@
 .hamburger img {
   width: 24px;
   height: 24px;
-  // vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* Nav Styles */
@@ -70,7 +70,7 @@
   color: goldenrod;
   padding: 1em;
   display: flex;
-  // flex-direction: column;
+  flex-direction: column;
   align-items: flex-end; /* Align nav contents to the right */
 }
 
@@ -96,7 +96,7 @@
 }
 
 .nav-list a:hover {
-  color: goldenrod;
+  color: #bbb;
 }
 
 .dropdown {
@@ -108,7 +108,7 @@
 }
 
 .dropdown-menu {
-  background-color: #bbb;
+  background-color: #333;
   padding: 1em;
   position: absolute;
   top: 100%;
@@ -137,7 +137,6 @@
 .dropdown-menu a:hover {
   color: #ccc;
 }
-
 .bgShop {
   background-image: url("./assets/images/bg-shop.jpg");
   background-repeat: no-repeat;
@@ -432,29 +431,38 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  .nav {
-    display: none; /* Hide nav on smaller screens */
-  }
-  .hamburger img {
+  .hamburger {
     display: block;
-    margin-left: auto; /* Move hamburger to the right side */
   }
-
   .nav-toggle {
-    display: block; /* Show nav toggle on smaller screens */
-  }
-
-  .nav-toggle:focus + .nav {
-    display: block; /* Show nav when nav toggle is focused */
+    display: none; /* Hide on desktop */
   }
 
   .nav-list {
-    flex-direction: column; /* Make nav list items stack vertically */
+    display: none; /* Hide nav list */
+    flex-direction: column;
+    position: absolute; /* Optional: position it absolutely */
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    right: 0;
+    background-color: #07077b; /* Match header background */
+    z-index: 1000; /* Ensure it's on top */
+  }
+  .nav {
+    display: flex;
+  }
+
+  .nav-list.show {
+    display: flex;
   }
 
   .nav-list li {
-    margin-right: 0; /* Remove margin right from nav list items */
-    padding: 10px 20px; /* Add padding to nav list items */
+    margin-right: 0;
+    padding: 10px 20px;
+  }
+
+  .bundles {
+    grid-template-columns: 1fr;
   }
 }
 
