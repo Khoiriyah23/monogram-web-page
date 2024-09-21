@@ -54,16 +54,15 @@ const Header = () => {
                  0,0,0,404.4,57.222Zm-4.579-5.62a3.694,3.694,0,0,1-1.351,3.125,6.154,6.154,0,0,1-3.8,1.1h-.024l-5.345,0V47.266h5.345C398.
                  172,47.266,399.817,48.633,399.818,51.6Z"></path></svg>
         </a>
-        <button className="nav-toggle" aria-label="Toggle navigation" onClick={toggleNav}>
+        <button className="nav-toggle" aria-label="Toggle navigation" aria-expanded={navOpen} onClick={toggleNav}>
   <span className={`hamburger ${navOpen ? 'active' : ''}`}>
-  {navOpen ? (
-  <svg width="24" height="24" viewBox="0 0 24 24">
-    <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-  </svg>
-) : (
-  <img src={hambug} alt="Menu" />
-)}
-
+    {navOpen ? (
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ) : (
+      <img src={hambug} alt="Menu" />
+    )}
   </span>
 </button>
 

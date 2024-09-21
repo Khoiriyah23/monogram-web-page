@@ -1,140 +1,141 @@
+/* Global Styles */
 
-
-*{
-  padding: 0px;
-  margin: 0px;
+* {
   box-sizing: border-box;
-}
-
-.flex {
-  display: -webkit-flex;
-  display: flex;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #07077b;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-
-}
-
-.logo a {
-  display: flex;
-  align-items: center;
-  color: goldenrod;
-
-}
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  position: absolute;
-  transition: all 0.3s;
-}
-
-.hamburger::before {
-  top: -8px;
-}
-
-.hamburger::after {
-  top: 8px;
-}
-
-.hamburger.active {
-  background-color: transparent;
-}
-
-.hamburger.active::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.hamburger.active::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-/* Navigation styles */
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: goldenrod;
-
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-list li {
-  margin-right: 1rem;
-  color: goldenrod;
+// body {
+//   font-family: Arial, sans-serif;
+//   // line-height: 1.6;
+//   color: #333;
+//   background-color: #f9f9f9;
+// }
 
-}
+/* Header Styles */
 
-.nav-list li a {
-  color: goldenrod;
-  text-decoration: none;
-  font-weight: bold;
-}
-.nav-list span{
-  display: block;
-}
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  width: 100%;
-  background-color: #fff;
+.header {
+  background-color: #07077b;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+}
+
+.logo {
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+// .logo svg {
+//   fill: #fff;
+// }
+
+.nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: none; /* Hide nav toggle on desktop view */
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+.hamburger {
+  display: none; /* Hide hamburger image on desktop view */
+}
+
+.hamburger.active svg {
+  stroke: goldenrod;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 24px;
+  // vertical-align: middle;
+}
+
+/* Nav Styles */
+
+.nav {
+  color: goldenrod;
+  padding: 1em;
+  display: flex;
+  // flex-direction: column;
+  align-items: flex-end; /* Align nav contents to the right */
+}
+
+.nav-list {
   list-style: none;
   margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* Align nav list items to the right */
 }
 
-.dropdown-menu.show {
-  display: block;
+.nav-list li {
+  margin-bottom: 1em;
+  padding: 10px;
 }
 
-.nav-list .dropdown {
+.nav-list a {
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-list a:hover {
+  color: goldenrod;
+}
+
+.dropdown {
   position: relative;
 }
 
-.nav-list .dropdown a {
-  cursor: pointer;
-  color: goldenrod;
-  width: 100%;
+.dropdown-toggle {
+  display: inline-block;
+}
 
+.dropdown-menu {
+  background-color: #bbb;
+  padding: 1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.dropdown-menu.show {
+  transform: scaleY(1);
+}
+
+.dropdown-menu li {
+  margin-bottom: 1em;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+  color: #ccc;
 }
 
 .bgShop {
@@ -156,7 +157,7 @@
 .bgShop article {
   width: 80%;
   margin: auto;
-  color:  #ffdd57;
+  color: #ffdd57;
   padding: 20px;
   border-radius: 10px;
 }
@@ -173,7 +174,7 @@
   font-size: 1.4rem;
 }
 
-main{
+main {
   width: 100%;
 }
 
@@ -190,7 +191,6 @@ main{
 .bundles div {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   margin-bottom: 10px;
 }
 
@@ -205,12 +205,13 @@ main{
 }
 
 .bundles article p {
-  margin-top: 0px;
+  margin-top: 0;
   font-size: 1rem;
 }
 
-.bundles .price, .bundles button {
-  margin-left: auto; 
+.bundles .price,
+.bundles button {
+  margin-left: auto;
   margin-top: 0;
 }
 
@@ -224,25 +225,25 @@ main{
   margin-bottom: 30px;
   text-align: center;
   padding: 20px;
+}
 
-  article {
-    max-width: 90%;
-    margin: auto;
-    color: #063874ad;
-    margin-top: 20px;
-  }
+.ownConsole article {
+  max-width: 90%;
+  margin: auto;
+  color: #063874ad;
+  margin-top: 20px;
+}
 
-  h1 {
-    font-size: 2.8rem;
-    word-spacing: 10px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    display: inline-block;
-  }
+.ownConsole h1 {
+  font-size: 2.8rem;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+}
 
-  p {
-    font-size: 1.4rem;
-  }
+.ownConsole p {
+  font-size: 1.4rem;
 }
 
 .monogramCases {
@@ -252,16 +253,16 @@ main{
   gap: 20px;
   width: 75%;
   color: #063874ad;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
-.monogramCases article{
-  
-  button{
+
+.monogramCases article {
+  button {
     color: #fff;
     background-color: #063874ad;
   }
-  span{
+  span {
     color: #063874ad;
   }
 }
@@ -299,7 +300,8 @@ main{
   width: auto;
 }
 
-.monogramCases button, .bundles button{
+.monogramCases button,
+.bundles button {
   width: 40%;
   padding: 8px 16px;
   border: none;
@@ -319,12 +321,11 @@ main{
   color: #333;
 }
 
-
 footer {
   width: 100%;
-  background-color: #07077b; 
-    padding: 30px 10%;
-    color: rgba(42, 36, 4, 0.274);
+  background-color: #07077b;
+  padding: 30px 10%;
+  color: rgba(42, 36, 4, 0.274);
   box-sizing: border-box;
 }
 
@@ -336,7 +337,7 @@ footer section {
 
 footer article {
   color: goldenrod;
-  flex: 1 1 calc(20% - 20px); 
+  flex: 1 1 calc(20% - 20px);
   margin: 10px 0;
   box-sizing: border-box;
 }
@@ -346,9 +347,10 @@ footer h1 {
   margin-bottom: 10px;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   margin: 5px 0;
-  color:  #ffdd57;
+  color: #ffdd57;
   text-decoration: none;
   display: block;
 }
@@ -394,44 +396,6 @@ footer a:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .header{
-    position: relative;
-  }
-  .nav-toggle {
-    display: block;
-    position: absolute; /* Position it absolutely */
-    top: 1rem; /* Adjust as needed */
-    right: 1rem; /* Align to the right */
-    z-index: 15; /* Ensure it appears above other elements */
-    max-width: 100%;
-  }
-
-  .nav {
-    display: none; /* Hide nav by default on mobile */
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Full width */
-    background-color: white; /* Optional: set a background color */
-    position: absolute; /* Position absolutely */
-    top: 100%; /* Place below the header */
-    left: 0; /* Align to the left */
-    z-index: 10; /* Ensure it appears above other elements */
-    max-width: 100%;
-  }
-
-  .nav.show {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-}
 @media (max-width: 1200px) {
   .bgShop h1 {
     font-size: 2rem;
@@ -440,17 +404,20 @@ footer a:hover {
   .bgShop p {
     font-size: 1.2rem;
   }
+
   .monogramCases {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);
     margin: 0 auto;
     width: 90%;
   }
+
   footer section {
     flex-wrap: wrap;
   }
+
   footer article {
-    flex: 1 1 calc(45% - 20px); 
+    flex: 1 1 calc(45% - 20px);
   }
 }
 
@@ -464,140 +431,39 @@ footer a:hover {
   }
 }
 
-@media (max-width: 480px) {
-  .bgShop h1 {
-    font-size: 1.2rem;
-  }
-  
-  .bgShop p {
-    font-size: 0.9rem;
-  }
-}
-
-
-
 @media (max-width: 768px) {
-  footer section {
-    flex-wrap: wrap;
+  .nav {
+    display: none; /* Hide nav on smaller screens */
   }
-  footer article {
-    flex: 1 1 calc(45% - 20px); 
+  .hamburger img {
+    display: block;
+    margin-left: auto; /* Move hamburger to the right side */
+  }
+
+  .nav-toggle {
+    display: block; /* Show nav toggle on smaller screens */
+  }
+
+  .nav-toggle:focus + .nav {
+    display: block; /* Show nav when nav toggle is focused */
+  }
+
+  .nav-list {
+    flex-direction: column; /* Make nav list items stack vertically */
+  }
+
+  .nav-list li {
+    margin-right: 0; /* Remove margin right from nav list items */
+    padding: 10px 20px; /* Add padding to nav list items */
   }
 }
 
-@media (max-width: 480px) {
-  footer section {
-    flex-direction: column;
-    align-items: center;
-  }
-  footer article {
-    flex: 1 1 100%; 
-    max-width: 100%;
-    margin: 10px 0;
-  }
-}
-
-
-
-@media (max-width: 1180px) {
-  .ownConsole {
-    height: 500px;
-  }
-
+@media (max-width: 600px) {
   .ownConsole h1 {
-    font-size: 2.5rem;
-  }
-
-  .ownConsole p {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .ownConsole {
-    height: 400px;
-  }
-
-  .ownConsole h1 {
-    font-size: 2.2rem;
-  }
-
-  .ownConsole p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 788px) {
-  .ownConsole {
-    height: 400px;
-  }
-
-  .ownConsole h1 {
-    width: 100%;
     font-size: 2rem;
   }
 
-  .ownConsole p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 728px) {
-  .ownConsole {
-    height: 400px;
-  }
-
-  .ownConsole h1 {
-    width: 100%;
-    font-size: 2rem;
-  }
-
-  .ownConsole p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 680px) {
-  .ownConsole {
-    height: 500px;
-    padding: 10px;
-  }
-
-  .ownConsole h1 {
-    width: 100%;
-    font-size: 1.8rem;
-  }
-
-  .ownConsole p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .ownConsole {
-    height: 530px;
-  }
-
-  .ownConsole h1 {
-    font-size: 1.6rem;
-  }
-
-  .ownConsole p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .ownConsole {
-    height: 550px;
-  }
-
-  .ownConsole h1 {
-    width: 100%;
-    font-size: 1.6rem;
-  }
-
-  .ownConsole p {
-    font-size: 0.9rem;
+  .monogramCases {
+    grid-template-columns: 1fr;
   }
 }
