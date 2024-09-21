@@ -1,71 +1,200 @@
-import iconInstagram from "../assets/images/icon-instagram.svg";
-import iconFacebook from "../assets/images/icon-facebook.svg";
-import iconTwitter from "../assets/images/icon-twitter.svg";
+
+import instagram from "../assets/images/instagram.svg";
+import facebook from "../assets/images/facebook.svg";
+import twitter from "../assets/images/twitter.svg";
+// import youtube from "../assets/images/youtube.svg";
 
 const Footer = () => {
     return (
-        <footer>
-            <section className="footer-container">
-                <article>
-                    <h1>Monogram</h1>
-                    <div>
-                        <p>305 King St. W.</p>
-                        <p>Suite 502</p>
-                        <p>Kitchener, ON</p>
-                        <p>Canada</p>
-                    </div>
-                </article>
+        <>
+        <div className="footer-div">
 
-                <article>
-                    <h1>Quick Links</h1>
                     <div>
-                        <a href="#">Home</a>
-                        <a href="#">How it Works</a>
-                        <a href="#">Shop</a>
-                        <a href="#">Download</a>
+                        <h4>MONOGRAM</h4>
+                        <p>305 King St. W.<br/>
+                            Suite 502<br/>
+                            Kitchener, ON<br/>
+                            Canada</p>
                     </div>
-                </article>
 
-                <article>
-                    <h1>Helps</h1>
                     <div>
-                        <a href="#">FAQs</a>
-                        <a href="#">Support Center</a>
-                        <a href="#">Shipping and Sales</a>
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">How it Works</a></li>
+                            <li><a href="/">Shop</a></li>
+                            <li><a href="/">Download</a></li>
+                        </ul>
                     </div>
-                </article>
 
-                <article>
-                    <h1>Information</h1>
                     <div>
-                        <a href="#">About Us</a>
-                        <a href="#">Work with us</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Terms of Sale</a>
-                        <a href="#">Press Kit</a>
+                        <h4>HELPS</h4>
+                        <ul>
+                            <li><a href="/">FAQs</a></li>
+                            <li><a href="/">Support Center</a></li>
+                            <li><a href="/">Shipping and Sales</a></li>
+                        </ul>
                     </div>
-                </article>
 
-                <article>
-                    <h1>Subscribe to Monogram</h1>
                     <div>
+                        <h4>INFORMATION</h4>
+                        <ul>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Work with us</a></li>
+                            <li><a href="/">Privacy Policy</a></li>
+                            <li><a href="/">Terms of Use</a></li>
+                            <li><a href="/">Terms of Sale</a></li>
+                            <li><a href="/">Press Kit</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>SUBSCRIBE TO MONOGRAM</h4>
                         <p>Master productivity with Creative Console and get all the latest Monogram news.</p>
-                        <div className="subscribe">
-                            <input type="email" placeholder="Your email" />
-                            <button>Submit</button>
+                        <input placeholder="Email Address"></input>
+                        <button>SUBMIT</button> <br />
+                        <a href="/">
+                            <img src={instagram} alt="instagram" />
+                        </a>
+                        <a href="/">
+                            <img src={twitter} alt="X" />
+                        </a>
+                        <a href="/">
+                            <img src={facebook} alt="facebook" />
+                        </a>
+                        <p>&copy; Monogram 2024</p>
+                    </div>
+        </div>
+
+        <div className="mobile-footer">
+
+            <div>
+                <div>
+                    <h4>MONOGRAM</h4>
+                    <p>305 King St. W.<br/>
+                        Suite 502<br/>
+                        Kitchener, ON<br/>
+                        Canada</p>
+                </div>
+
+                <div>
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">How it Works</a></li>
+                        <li><a href="/">Shop</a></li>
+                        <li><a href="/">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>  
+                <div>
+                    <h4>SUBSCRIBE TO MONOGRAM</h4>
+                    <p>Master productivity with Creative Console and get all the latest Monogram news.</p>
+                    <input placeholder="Email Address"></input>
+                    <button>SUBMIT</button> <br />
+                    <a href="/">
+                        <img src={instagram} alt="instagram" />
+                    </a>
+                    <a href="/">
+                        <img src={twitter} alt="X" />
+                    </a>
+                    <a href="/">
+                        <img src={facebook} alt="facebook" />
+                    </a>
+                    <p>&copy; Monogram 2024</p>
+                </div>
+
+                <div className="flex">
+
+                    <div id="help">
+                        <h4>HELPS</h4>
+                        <ul>
+                            <li><a href="/">FAQs</a></li>
+                            <li><a href="/">Support Center</a></li>
+                            <li><a href="/">Shipping and Sales</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="info">
+                        <h4>INFORMATION</h4>
+                        <ul>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Work with us</a></li>
+                            <li><a href="/">Privacy Policy</a></li>
+                            <li><a href="/">Terms of Use</a></li>
+                            <li><a href="/">Terms of Sale</a></li>
+                            <li><a href="/">Press Kit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div className="last-mobile-footer">
+                <div>
+                    <h4>SUBSCRIBE TO MONOGRAM</h4>
+                    <p>Master productivity with Creative Console and get all the latest <br/> Monogram news.</p>
+                    <input placeholder="Email Address"></input>
+                    <button>SUBMIT</button> <br />
+                    <a href="/">
+                        <img src={instagram} alt="instagram" />
+                    </a>
+                    <a href="/">
+                        <img src={twitter} alt="X" />
+                    </a>
+                    <a href="/">
+                        <img src={facebook} alt="facebook" />
+                    </a>
+                   
+                </div>
+                <div className="flex">
+                    <div>
+                        <div>
+                                <h4>MONOGRAM</h4>
+                                <p>305 King St. W.<br/>
+                                    Suite 502<br/>
+                                    Kitchener, ON<br/>
+                                    Canada</p>
                         </div>
-                        <div className="icons">
-                            <a href="#"><img src={iconInstagram} alt="Instagram" /></a>
-                            <a href="#"><img src={iconFacebook} alt="Facebook" /></a>
-                            <a href="#"><img src={iconTwitter} alt="Twitter" /></a>
+                        <div>
+                                <h4>HELPS</h4>
+                                <ul>
+                                    <li><a href="/">FAQs</a></li>
+                                    <li><a href="/">Support Center</a></li>
+                                    <li><a href="/">Shipping and Sales</a></li>
+                                </ul>
                         </div>
                     </div>
-                    <p>&copy; Monogram 2024</p>
-                </article>
-            </section>
-        </footer>
-    );
+                    <div>
+                        <div>
+                                <h4>QUICK LINKS</h4>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">How it Works</a></li>
+                                    <li><a href="/">Shop</a></li>
+                                    <li><a href="/">Download</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                            <h4>INFORMATION</h4>
+                            <ul>
+                                <li><a href="/">About Us</a></li>
+                                <li><a href="/">Work with us</a></li>
+                                <li><a href="/">Privacy Policy</a></li>
+                                <li><a href="/">Terms of Use</a></li>
+                                <li><a href="/">Terms of Sale</a></li>
+                                <li><a href="/">Press Kit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>&copy; Monogram 2024</p>
+        </div>
+        </>
+    )
 }
 
 export default Footer;

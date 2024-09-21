@@ -1,15 +1,19 @@
-import "./App.scss";
-import Footer from "./componets/Footer";
-import Header from "./componets/Header";
-import Main from "./componets/Main";
+import './App.scss';
+import Header from './componets/Header';
+import Main from './componets/Main';
+import Footer from './componets/Footer';
+
+import { useState } from "react";
 
 function App() {
+  
+  const [currency, setCurrency] = useState("");
   return (
     <>
-      <Header/>
-      <Main/>
-      <Footer/>
-  </>
+      <Header currency={currency} setCurrency={setCurrency}/>
+      <Main currency={currency} setCurrency={setCurrency}/> 
+      <Footer />
+    </>
   );
 }
 
